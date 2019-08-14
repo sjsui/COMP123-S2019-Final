@@ -54,7 +54,7 @@ namespace COMP123_S2019_FinalTestA.Views
 
                     }
                 }
-                fsr.close();
+                
             }
             catch (Exception e)
             {
@@ -62,33 +62,35 @@ namespace COMP123_S2019_FinalTestA.Views
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
-            Console.ReadKey();
-        
-    
 
-	
-	        try
+
+
+
+
+            try
             {
                 using (StreamReader lsr = new StreamReader("lastName.txt"))
                 {
                     string lname;
-                   
-		            while ((lname = lsr.ReadLine()) != null)
-                    {
-			            LastNameList.Add(lname);
-			
-                    }
-                
-			lsr.close();
 
+                    while ((lname = lsr.ReadLine()) != null)
+                    {
+                        LastNameList.Add(lname);
+
+                    }
+                }
             }
+
+
+
+
             catch (Exception e)
             {
-                
+
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
-            Console.ReadKey();
+            
         } 
 
         ///
@@ -130,6 +132,19 @@ namespace COMP123_S2019_FinalTestA.Views
         ///create the PowerList item
         List<string> PowersList = new List<string>();
 
+
+        ///created the loadpowers method
+        public void LoadPowers()
+        {
+
+        }
+       
+            
+
+
+        /// <summary>
+        /// created the GenerateRandomPowers method
+        /// </summary>
         public void GenerateRandomPowers()
         {
             var random = new Random();
@@ -177,6 +192,21 @@ namespace COMP123_S2019_FinalTestA.Views
         private void HeroMenuStrip_ItemClicked(object sender, System.Windows.Forms.ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// This is the event handler for HeroGenerator Load event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void HeroGenerator_Load(object sender, EventArgs e)
+        {
+            LoadPowers();
         }
     }
 }
