@@ -147,7 +147,7 @@ namespace COMP123_S2019_FinalTestA.Views
             Power3Label.Text = PowersList[index3];
             Power4Label.Text = PowersList[index4];
         }
-       
+
 
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace COMP123_S2019_FinalTestA.Views
             Random ability = new Random();
             FightingDataLabel.Text = Convert.ToString(ability.Next(0, 50));
             AgilityDataLabel.Text = Convert.ToString(ability.Next(0, 50));
-            StrengthDataLabel.Text= Convert.ToString(ability.Next(0, 50)); 
+            StrengthDataLabel.Text = Convert.ToString(ability.Next(0, 50));
             EnduranceDataLabel.Text = Convert.ToString(ability.Next(0, 50));
             ReasonDataLabel.Text = Convert.ToString(ability.Next(0, 50));
             IntuitionDataLabel.Text = Convert.ToString(ability.Next(0, 50));
