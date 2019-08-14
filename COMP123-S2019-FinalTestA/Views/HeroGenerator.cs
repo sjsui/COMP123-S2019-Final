@@ -173,5 +173,10 @@ namespace COMP123_S2019_FinalTestA.Views
         {
             GenerateRandomPowers();
         }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
