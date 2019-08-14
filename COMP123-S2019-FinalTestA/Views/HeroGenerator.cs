@@ -122,11 +122,39 @@ namespace COMP123_S2019_FinalTestA.Views
             }
         }
 
+        /// <summary>
+        /// This is the event handler for the GenerateNameButton Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
             GenerateNames();
         }
 
+        ///create the PowerList item
+        List<string> PowersList = new List<string>();
+
+        public void GenerateRandomPowers()
+        {
+            var random = new Random();
+            int index1 = random.Next(PowersList.Count);
+            int index2 = random.Next(PowersList.Count);
+            int index3 = random.Next(PowersList.Count);
+            int index4 = random.Next(PowersList.Count);
+            Power1Label.Text = PowersList[index1];
+            Power2Label.Text = PowersList[index2];
+            Power3Label.Text = PowersList[index3];
+            Power4Label.Text = PowersList[index4];
+        }
+       
+
+
+        /// <summary>
+        /// THis is the event handler for the GenerateAbilitiesButton CLick event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
         {
             Random ability = new Random();
@@ -143,7 +171,7 @@ namespace COMP123_S2019_FinalTestA.Views
 
         private void GeneratePowerButton_Click(object sender, EventArgs e)
         {
-
+            GenerateRandomPowers();
         }
     }
 }
